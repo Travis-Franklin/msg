@@ -18,7 +18,8 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3"
   },
   "repository": {
     "type": "git",
