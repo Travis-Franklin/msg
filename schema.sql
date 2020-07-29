@@ -18,8 +18,8 @@ create TABLE msgs (
 create TABLE replies (
     msg_id msgs(msg_id),
     reply_id serial PRIMARY key,
-    reply_text text
-
+    reply_text text,
+    reply_timestamp TIMESTAMP
 );
 
 create TABLE linking (
