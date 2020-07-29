@@ -6,7 +6,7 @@ const pgp = require('pg-promise')({
 
 const options = {
     host: 'localhost',
-    database: 'fullstack-pets'
+    database: 'msg-app'
 };
 
 const db = pgp(options);
