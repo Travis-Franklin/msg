@@ -13,15 +13,31 @@ app.set('view engine', 'html');
 async function listMsgs(){
     try{
         console.log('inside try')
-        // const allMsgs = await db.any(`
-        // select * from msgs`);
-        // console.log(allMsgs);
+        const allMsgs = await db.any(`
+        select * from msgs`);
+        console.log(allMsgs);
     } catch (err) {
         console.log('There is an error inside listMsgs')
     };
 }
 
 listMsgs();
+
+async function insertMsgs(){
+    try {
+        console.log('inside insertMsgs');
+        const insertMessage = await db.any (`
+         insert into msg_txt
+         (msg_id, msg_txt) 
+         values
+         (10, 'Successfully Inserted')`)
+    }
+    catch (err){
+        console.log("Error inside insertMsgs")
+    }
+}
+
+insertMsgs();
 
 server.listen(PORT, () => {
     console.log('im listening');
